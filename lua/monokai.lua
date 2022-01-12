@@ -103,7 +103,7 @@ M.load_syntax = function(palette)
   return {
     Normal = {
       fg = palette.white,
-      bg = palette.base2,
+      --bg = palette.base2,
     },
     NormalFloat = {
       bg = palette.base1,
@@ -183,16 +183,17 @@ M.load_syntax = function(palette)
       fg = palette.brown,
     },
     LineNr = {
-      fg = palette.base5,
-      bg = palette.base2,
+      fg = palette.base7,
+      --bg = palette.base2,
     },
     SignColumn = {
       fg = palette.white,
       bg = palette.base2,
     },
     StatusLine = {
-      fg = palette.base7,
-      bg = palette.base3,
+      fg = palette.black,
+      bg = palette.base8,
+      style = 'bold',
     },
     StatusLineNC = {
       fg = palette.grey,
@@ -664,7 +665,7 @@ M.setup = function(config)
   if vim.fn.exists('syntax_on') then
     vim.cmd('syntax reset')
   end
-  -- vim.o.background = 'dark'
+  vim.o.background = 'dark'
   vim.o.termguicolors = true
   config = config or {}
   config = vim.tbl_deep_extend('keep', config, default_config)
