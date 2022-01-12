@@ -664,7 +664,7 @@ M.setup = function(config)
   if vim.fn.exists('syntax_on') then
     vim.cmd('syntax reset')
   end
-  vim.o.background = 'dark'
+  -- vim.o.background = 'dark'
   vim.o.termguicolors = true
   config = config or {}
   config = vim.tbl_deep_extend('keep', config, default_config)
